@@ -4,7 +4,7 @@ module.exports = function(grunt){
   grunt.initConfig({
     concat: {
      dist: {
-        src: ['server.js', 'app/home.controller.js', 'app/app.js'],
+        src: ['server.js', 'app/home/home.controller.js', 'app/app.js','app/rules/rules.controller.js'],
         dest: 'build/js/scripts.js',
       },
     },

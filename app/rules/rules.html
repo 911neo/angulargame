@@ -1,0 +1,51 @@
+<header>
+       <md-toolbar class='md-medium-tall'>
+         <div class="md-toolbar-tools">
+             <h1>Diabolocom Game Task</h1>
+             <span flex></span>
+
+         </div>
+       </md-toolbar>
+</header>
+
+
+<div ng-controller='rulescontroller'>
+
+
+  <div layout="row">
+    <div flex="20">
+
+    </div>
+    <div flex="40">
+      <timeline>
+          <timeline-event ng-repeat="event in events" side="right">
+            <timeline-badge class="{{event.badgeClass}}">
+              <i class="glyphicon {{event.badgeIconClass}}"></i>
+            </timeline-badge>
+            <timeline-panel class="{{event.badgeClass}}">
+              <timeline-heading>
+                <h4>{{event.title}}</h4>
+              </timeline-heading>
+              <p>{{event.content}}</p>
+            </timeline-panel>
+          </timeline-event>
+        </timeline>
+      </div>
+
+    </div>
+    <div flex hide-sm hide-xs>
+
+    </div>
+  </div>
+
+   <div layout="row">
+     <div flex="45">
+
+     </div>
+     <div flex="55">
+<md-button href="#/home" class="md-raised md-primary">Play Now</md-button>
+     </div>
+     <div flex hide-sm hide-xs>
+
+     </div>
+   </div>

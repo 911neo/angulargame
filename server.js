@@ -8,6 +8,8 @@ app.use(bodyParser.json());
 
 app.use('/app',express.static(__dirname+"/app"));
 app.use('/node_modules',express.static(__dirname+"/node_modules"));
+app.use('/bower_components',express.static(__dirname+"/bower_components"));
+
 
 app.get('/',function(req,res) {
   console.log("loading angular mean stack app");
@@ -17,7 +19,7 @@ app.get('/',function(req,res) {
 });
 
 
-// watching from grunt 
+// watching from grunt
 
 app.listen(2000);
 console.log("server running on port 2000");
